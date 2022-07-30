@@ -1,0 +1,17 @@
+foo:
+  remote-address: 192.168.1.1
+  security:
+    username: admin
+spring:
+  devtools:
+    restart:
+      # 재실행 트리거에서 제외할 파일 설정하기
+      exclude: static/**, public/**
+      # 재실행 트리거에서 제외할 파일 추가 설정하기
+      additional-exclude: java/**, test/**
+    # 브라우저 LiveReload 서버와 웹소켓 통신 연결 (크롬, 파이어폭스, 사파리)
+    livereload:
+      enabled: true
+    remote:
+      restart:
+        enabled: true
